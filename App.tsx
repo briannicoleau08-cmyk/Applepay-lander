@@ -30,9 +30,16 @@ const App = () => {
               </div>
             </div>
           </div>
-          <button className="w-full bg-white text-black font-semibold py-5 px-6 rounded-2xl hover:bg-gray-100 transition-all duration-200 text-lg h-auto">
-            EARN HERE
-          </button>
+         <a
+  href="https://uplevelrewarded.com/aff_c?offer_id=2596&aff_id=152811"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="w-full bg-white text-black font-semibold py-5 px-6 rounded-2xl hover:bg-gray-100 transition-all duration-200 text-lg h-auto">
+    EARN HERE
+  </button>
+</a>
+
           <div className="flex items-center justify-center gap-2 mt-3">
             <p className="text-sm text-white">Verified By TikTok</p>
             <img src="/tiktok-verified.png" alt="Verified" className="w-6 h-6" />
