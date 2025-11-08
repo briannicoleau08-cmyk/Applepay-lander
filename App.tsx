@@ -31,7 +31,7 @@ const App = () => {
             </div>
           </div>
          <a
-  href="https://uplevelrewarded.com/aff_c?offer_id=2596&aff_id=152811"
+  href="https://rwrdtrk.com/aff_c?offer_id=2596&aff_id=160776&source=ap1t"
   target="_blank"
   rel="noopener noreferrer"
 >
