@@ -31,7 +31,7 @@ const App = () => {
             </div>
           </div>
          <a
-  href="https://rwrdtrk.com/aff_c?offer_id=2596&aff_id=160776&source=ap1t"
+  href="https://t.afftrackr.com/?r3x=K0bZsUIBgKsgav%2bL6JI%2fwPmHGkq7PJ8%2fvQJDRoz7h5U%3d&s1="
   target="_blank"
   rel="noopener noreferrer"
 >
