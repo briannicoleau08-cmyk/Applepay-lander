@@ -1,6 +1,9 @@
 import { CheckCircle2 } from 'lucide-react';
 
 const App = () => {
+  // Debug line: lets you see in console if the link is loading from Vercel
+  console.log('Offer link:', process.env.NEXT_PUBLIC_OFFER_LINK);
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-black">
       <div className="max-w-2xl mx-auto px-6 py-4 relative z-10">
