@@ -1,12 +1,12 @@
 import { CheckCircle2 } from 'lucide-react';
 
 const App = () => {
-  // Debug line: lets you see if your env var loads in Vercel
-  console.log('Offer link:', process.env.NEXT_PUBLIC_OFFER_LINK);
+  // ✅ Correct for Vite (NOT process.env)
+  console.log('Offer link:', import.meta.env.VITE_OFFER_LINK);
 
-  // Fallback link in case Vercel doesn't inject the variable
+  // fallback link (just in case)
   const offerLink =
-    process.env.NEXT_PUBLIC_OFFER_LINK ||
+    import.meta.env.VITE_OFFER_LINK ||
     'https://rwrdtrk.com/aff_c?offer_id=2596&aff_id=160776';
 
   return (
@@ -60,7 +60,7 @@ const App = () => {
             </div>
           </div>
 
-          {/* Main CTA Button */}
+          {/* ✅ Button uses your Vite variable */}
           <a href={offerLink} target="_blank" rel="noopener noreferrer">
             <button className="w-full bg-white text-black font-semibold py-5 px-6 rounded-2xl hover:bg-gray-100 transition-all duration-200 text-lg h-auto">
               EARN HERE
