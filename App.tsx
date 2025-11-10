@@ -1,8 +1,13 @@
 import { CheckCircle2 } from 'lucide-react';
 
 const App = () => {
-  // Debug line: lets you see in console if the link is loading from Vercel
+  // Debug line: lets you see if your env var loads in Vercel
   console.log('Offer link:', process.env.NEXT_PUBLIC_OFFER_LINK);
+
+  // Fallback link in case Vercel doesn't inject the variable
+  const offerLink =
+    process.env.NEXT_PUBLIC_OFFER_LINK ||
+    'https://rwrdtrk.com/aff_c?offer_id=2596&aff_id=160776';
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-black">
@@ -55,12 +60,8 @@ const App = () => {
             </div>
           </div>
 
-          {/* Button */}
-          <a
-            href={process.env.NEXT_PUBLIC_OFFER_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          {/* Main CTA Button */}
+          <a href={offerLink} target="_blank" rel="noopener noreferrer">
             <button className="w-full bg-white text-black font-semibold py-5 px-6 rounded-2xl hover:bg-gray-100 transition-all duration-200 text-lg h-auto">
               EARN HERE
             </button>
