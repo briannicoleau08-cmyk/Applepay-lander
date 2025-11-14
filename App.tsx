@@ -1,13 +1,24 @@
 import { CheckCircle2 } from 'lucide-react';
 
 const App = () => {
-  // ✅ Correct for Vite (NOT process.env)
+  // Correct for Vite (NOT process.env)
   console.log('Offer link:', import.meta.env.VITE_OFFER_LINK);
 
-  // fallback link (just in case)
+  // fallback link
   const offerLink =
     import.meta.env.VITE_OFFER_LINK ||
     'https://rwrdtrk.com/aff_c?offer_id=2596&aff_id=160776';
+
+  // 🔥 TikTok event fire function
+  const handleClick = () => {
+    try {
+      if (window.ttq) {
+        window.ttq.track('ClickButton'); // << 🔥 THIS is what unlocks optimization
+      }
+    } catch (e) {
+      console.log("TikTok track error:", e);
+    }
+  };
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-black">
@@ -60,9 +71,12 @@ const App = () => {
             </div>
           </div>
 
-          {/* ✅ Button uses your Vite variable */}
+          {/* 🔥 Button now tracks TikTok ClickButton event */}
           <a href={offerLink} target="_blank" rel="noopener noreferrer">
-            <button className="w-full bg-white text-black font-semibold py-5 px-6 rounded-2xl hover:bg-gray-100 transition-all duration-200 text-lg h-auto">
+            <button
+              onClick={handleClick}
+              className="w-full bg-white text-black font-semibold py-5 px-6 rounded-2xl hover:bg-gray-100 transition-all duration-200 text-lg h-auto"
+            >
               EARN HERE
             </button>
           </a>
@@ -86,3 +100,4 @@ const App = () => {
 };
 
 export default App;
+
